@@ -135,7 +135,7 @@ public class MenuZombieland extends JMenuBar {
 				if (desktop != null
 						&& desktop.isSupported(Desktop.Action.BROWSE)) {
 					try {
-						desktop.browse(new URI("http://www.google.com"));
+						desktop.browse(new URI("http://lmgtfy.com/?q=Como+jugar+Zombieland"));
 					} catch (Exception ex) {
 						System.err.println(ex.getMessage());
 					}
