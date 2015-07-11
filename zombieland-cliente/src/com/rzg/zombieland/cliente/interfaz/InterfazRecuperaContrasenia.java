@@ -28,7 +28,7 @@ import com.rzg.zombieland.comunes.misc.ParametrosNoValidosException;
 import com.rzg.zombieland.comunes.misc.ZombielandException;
 
 /**
- * Interfaz de recuperar contraseña.
+ * Interfaz de recuperar contraseÃ±a.
  * 
  * @author Ivan
  */
@@ -133,18 +133,18 @@ public class InterfazRecuperaContrasenia extends JFrame
         contentPane.add(lblTitulo);
         
         JLabel lblImagen = new JLabel("");
-        lblImagen.setIcon(new ImageIcon(RutaImagen.get("imagenes/zombie-silueta.png")));
+        //lblImagen.setIcon(new ImageIcon(RutaImagen.get("imagenes/zombie-silueta.png")));
         lblImagen.setBounds(-5, -30, 100, 386);
         contentPane.add(lblImagen);
         
         JLabel lblFondo = new JLabel("");
-        lblFondo.setIcon(new ImageIcon(RutaImagen.get("imagenes/Fondos/fondo-contraseña.png")));
+        //lblFondo.setIcon(new ImageIcon(RutaImagen.get("imagenes/Fondos/fondo-contraseÃ±a.png")));
         lblFondo.setBounds(-400, 0, 925, 386);
         contentPane.add(lblFondo);
 	}
 	/**
 	 * Se verifica que la respuesta de seguridad ingresada sea la correcta,
-	 * y se abre una ventana para que realice el cambio de contraseña
+	 * y se abre una ventana para que realice el cambio de contraseÃ±a
 	 */
 	public void verificarRespuesta() {
 		if (textFieldResp.getText().equals(respuestaReal)){
@@ -156,7 +156,7 @@ public class InterfazRecuperaContrasenia extends JFrame
 		else
 			JOptionPane.showMessageDialog(this,
 					"Respuesta incorrecta",
-					"Recuperar Contraseña Fallo",
+					"Recuperar ContraseÃ±a Fallo",
 					JOptionPane.WARNING_MESSAGE);
 		
 	}
@@ -186,7 +186,7 @@ public class InterfazRecuperaContrasenia extends JFrame
 					}
 					JOptionPane.showMessageDialog(_this,
 							respuesta.getMensajeError(),
-							"Recuperar Contraseña Fallo",
+							"Recuperar ContraseÃ±a Fallo",
 							JOptionPane.WARNING_MESSAGE);
 					labelContrasenia.setVisible(false);
 				}
@@ -194,10 +194,10 @@ public class InterfazRecuperaContrasenia extends JFrame
 			
 		} catch (ParametrosNoValidosException e) {
 			JOptionPane.showMessageDialog(this, e.getMensaje(),
-					"Recuperar Contraseña Fallo", JOptionPane.WARNING_MESSAGE);
+					"Recuperar ContraseÃ±a Fallo", JOptionPane.WARNING_MESSAGE);
 		} catch (ZombielandException e) {
 			JOptionPane.showMessageDialog(this, e.getMessage(),
-					"Recuperar Contraseña Fallo", JOptionPane.ERROR_MESSAGE);
+					"Recuperar ContraseÃ±a Fallo", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 	
