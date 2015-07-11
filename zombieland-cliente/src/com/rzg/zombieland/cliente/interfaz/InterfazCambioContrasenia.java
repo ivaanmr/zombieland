@@ -85,8 +85,8 @@ public class InterfazCambioContrasenia extends JFrame {
 		contentPane.add(btnCambiarContrasea);
 
 		JLabel lblFondo = new JLabel("");
-		lblFondo.setIcon(new ImageIcon(RutaImagen
-				.get("imagenes/Fondos/zombie-est-jug.png")));
+		/*lblFondo.setIcon(new ImageIcon(RutaImagen
+				.get("imagenes/Fondos/zombie-est-jug.png")));*/
 		lblFondo.setBounds(0, 0, 500, 475);
 		contentPane.add(lblFondo);
 	}
@@ -108,33 +108,33 @@ public class InterfazCambioContrasenia extends JFrame {
 									JOptionPane
 											.showMessageDialog(
 													contentPane,
-													"La contraseña se modificó con éxito!",
-													"Recuperar Contraseña",
+													"La contraseÃ±a se modificÃ³ con Ã©xito!",
+													"Recuperar ContraseÃ±a",
 													JOptionPane.WARNING_MESSAGE);
 									dispose();
 								} else
 									JOptionPane.showMessageDialog(contentPane,
 											respuesta.getMensajeError(),
-											"Cambiar Contraseña Fallo",
+											"Cambiar ContraseÃ±a Fallo",
 											JOptionPane.WARNING_MESSAGE);
 							}
 						});
 
 			} catch (ParametrosNoValidosException e) {
 				JOptionPane.showMessageDialog(this, e.getMensaje(),
-						"Recuperar Contraseña Fallo",
+						"Recuperar ContraseÃ±a Fallo",
 						JOptionPane.WARNING_MESSAGE);
 			} catch (ZombielandException e) {
 				JOptionPane
 						.showMessageDialog(this, e.getMessage(),
-								"Recuperar Contraseña Fallo",
+								"Recuperar ContraseÃ±a Fallo",
 								JOptionPane.ERROR_MESSAGE);
 			}
 
 		} else
 			JOptionPane.showMessageDialog(this,
-					"Ingresó una contraseña incorrecta.",
-					"Recuperar Contraseña Fallo", JOptionPane.WARNING_MESSAGE);
+					"IngresÃ³ una contraseÃ±a incorrecta.",
+					"Recuperar ContraseÃ±a Fallo", JOptionPane.WARNING_MESSAGE);
 		pass.setText("");
 		verificaPass.setText("");
 	}
