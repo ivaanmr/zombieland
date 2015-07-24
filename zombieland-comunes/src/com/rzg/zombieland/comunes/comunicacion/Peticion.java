@@ -9,29 +9,29 @@ import org.jdeferred.impl.DeferredObject;
 import com.google.gson.Gson;
 
 /**
- * Modela una petici髇 realizada al servidor.
+ * Modela una petici贸n realizada al servidor.
  * 
  * @author nicolas
- * @param <ClaseEnviable> el tipo de objeto que se env韆 al otro extremo.
- * @param <Respuesta> el tipo de objeto respuesta de la petici髇.
+ * @param <ClaseEnviable> el tipo de objeto que se env铆a al otro extremo.
+ * @param <Respuesta> el tipo de objeto respuesta de la petici贸n.
  *
  */
 public abstract class Peticion<ClaseEnviable, Respuesta> {
-    // Un ID 鷑ico para identificar a la petici髇.
+    // Un ID 煤nico para identificar a la petici贸n.
     private UUID id;
     
     // Promesa que se llena con la respuesta.
     private Deferred<Respuesta, Object, Respuesta> promesa;
     
-    // El objeto que se env韆 al servidor.
+    // El objeto que se env铆a al servidor.
     private ClaseEnviable enviable;
     
-    // La clase que forma el objeto respuesta de esta petici髇.
+    // La clase que forma el objeto respuesta de esta petici贸n.
     private Class<Respuesta> claseRespuesta;
      
     /**
-     * Construye la petici髇 asing醤dole un ID aleatorio y creando la promsa.
-     * @param enviable - el objeto que se env韆 al servidor.
+     * Construye la petici贸n asing谩ndole un ID aleatorio y creando la promesa.
+     * @param enviable - el objeto que se env铆a al servidor.
      * @param claseRespuesta - la clase que se responde.
      */
     public Peticion(ClaseEnviable enviable, Class<Respuesta> claseRespuesta) {
@@ -43,14 +43,14 @@ public abstract class Peticion<ClaseEnviable, Respuesta> {
         this.enviable = enviable;
     }
     /**
-     * @return el mensaje de una petici髇.
+     * @return el mensaje de una petici贸n.
      */
     public String getMensajePeticion() {
         return new Gson().toJson(enviable);
     }
 
     /**
-     * @return el c骴igo de la petici髇.
+     * @return el c贸digo de la petici贸n.
      */
     protected abstract int getCodigoPeticion();
 
@@ -64,7 +64,7 @@ public abstract class Peticion<ClaseEnviable, Respuesta> {
     }
     
     /**
-     * @return un ID 鷑ico de petici髇.
+     * @return un ID 煤nico de petici贸n.
      */
     public final UUID getID() {
         return id;
